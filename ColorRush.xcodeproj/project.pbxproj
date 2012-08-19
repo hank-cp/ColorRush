@@ -24,7 +24,6 @@
 		36748A0A15E0F560004EA119 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674891A15E0F55F004EA119 /* Icon-Small@2x.png */; };
 		36748A0B15E0F560004EA119 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674891B15E0F55F004EA119 /* Icon.png */; };
 		36748A0C15E0F560004EA119 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3674891C15E0F55F004EA119 /* Icon@2x.png */; };
-		36748A0D15E0F560004EA119 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3674891D15E0F55F004EA119 /* Info.plist */; };
 		36748A0E15E0F560004EA119 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3674891E15E0F55F004EA119 /* iTunesArtwork */; };
 		36748A0F15E0F560004EA119 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3674892215E0F55F004EA119 /* CCAction.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		36748A1015E0F560004EA119 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3674892415E0F55F004EA119 /* CCActionCamera.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -115,10 +114,6 @@
 		36748A6515E0F560004EA119 /* FontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 367489E215E0F55F004EA119 /* FontManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		36748A6615E0F560004EA119 /* ZAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 367489E415E0F55F004EA119 /* ZAttributedString.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		36748A6715E0F560004EA119 /* ZFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 367489E715E0F55F004EA119 /* ZFont.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		36748A6815E0F560004EA119 /* LICENSE_cocos2d.txt in Resources */ = {isa = PBXBuildFile; fileRef = 367489E815E0F55F004EA119 /* LICENSE_cocos2d.txt */; };
-		36748A6915E0F560004EA119 /* LICENSE_CocosDenshion.txt in Resources */ = {isa = PBXBuildFile; fileRef = 367489E915E0F55F004EA119 /* LICENSE_CocosDenshion.txt */; };
-		36748A6A15E0F560004EA119 /* LICENSE_FontLabel.txt in Resources */ = {isa = PBXBuildFile; fileRef = 367489EA15E0F55F004EA119 /* LICENSE_FontLabel.txt */; };
-		36748A6B15E0F560004EA119 /* LICENSE_TouchJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 367489EB15E0F55F004EA119 /* LICENSE_TouchJSON.txt */; };
 		36748A6C15E0F560004EA119 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 367489EE15E0F55F004EA119 /* CDataScanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		36748A6D15E0F560004EA119 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 367489F115E0F55F004EA119 /* CDataScanner_Extensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		36748A6E15E0F560004EA119 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 367489F315E0F55F004EA119 /* NSDictionary_JSONExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -848,12 +843,7 @@
 				36748A0A15E0F560004EA119 /* Icon-Small@2x.png in Resources */,
 				36748A0B15E0F560004EA119 /* Icon.png in Resources */,
 				36748A0C15E0F560004EA119 /* Icon@2x.png in Resources */,
-				36748A0D15E0F560004EA119 /* Info.plist in Resources */,
 				36748A0E15E0F560004EA119 /* iTunesArtwork in Resources */,
-				36748A6815E0F560004EA119 /* LICENSE_cocos2d.txt in Resources */,
-				36748A6915E0F560004EA119 /* LICENSE_CocosDenshion.txt in Resources */,
-				36748A6A15E0F560004EA119 /* LICENSE_FontLabel.txt in Resources */,
-				36748A6B15E0F560004EA119 /* LICENSE_TouchJSON.txt in Resources */,
 				36748A7815E0F6C8004EA119 /* Demo.plist in Resources */,
 				36748A7915E0F6C8004EA119 /* Demo.png in Resources */,
 			);
@@ -1011,6 +1001,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1031,6 +1025,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
